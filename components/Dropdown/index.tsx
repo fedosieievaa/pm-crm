@@ -6,14 +6,17 @@ type Props = {
     team: string;
     github: string;
     documentation: string;
+    top: string;
+    left: string;
 };
 
-export const Dropdown = ({ team, github, documentation }: Props) => {
+export const Dropdown = ({ team, github, documentation, top, left }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeButton, setActiveButton] = useState<string>();
 
     return (
-        <div className={styles.dropdown}>
+        <div className={styles.dropdown} style={{ top: `${top}px`,
+            left: `${left}px` }}>
             <li
                 className={`${styles.dropdownListItem} ${'team' === activeButton 
                     ? styles.active 

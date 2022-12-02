@@ -11,8 +11,8 @@ const Home: NextPage = () => {
         <div className={styles.container}>
             <Main>
                 <TopBanners />
-                <Sport title="Футбол" />
                 <UnderTopBanners />
+                <Sport title="Футбол" />
                 <Slots />
                 <Sport title="Кіберспорт" />
                 <Sport title="Баскетбол" />

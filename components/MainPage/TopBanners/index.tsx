@@ -16,20 +16,42 @@ enum Color {
 }
 
 export const TopBanners = () => {
-    const banners = [{ id: 'first-b' }, { id: 'second-b' }, { id: 'third-b' }, { id: 'fourth-b' }];
+    const banners = [
+        { id: 'first-b', 
+            team: 'first-top', 
+            github: 'test', 
+            documentation: 'documentation' },
+        { id: 'second-b', 
+            team: 'second-top', 
+            github: 'test', 
+            documentation: 'documentation' },
+        { id: 'third-b', 
+            team: 'third-top', 
+            github: 'test', 
+            documentation: 'documentation' },
+        { id: 'fourth-b', 
+            team: 'fourth-top',
+            github: 'test', 
+            documentation: 'documentation' },
+    ];
 
     return (
-        <div className={style.banners}>
-            {banners.map(({ id }) => (
-                <Banner
-                    key={id}
-                    color="blue"
-                    size="rect"
-                    onClick={() => {
-                        console.log('test');
-                    }}
-                />
-            ))}
+        <div>
+            <div className={style.banners}>
+                {banners.map(({ id, team, github, documentation }) => (
+                    <Banner
+                        key={id}
+                        color="blue"
+                        size="rect"
+                        team={team}
+                        github={github}
+                        documentation={documentation}
+                        onClick={() => {
+                            console.log('test');
+                        }}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

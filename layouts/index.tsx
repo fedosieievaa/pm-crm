@@ -16,14 +16,27 @@ export const Main = ({ children }: MainLayoutProps) => {
         <div
             className={styles.main}
             onClick={(e: any) => {
-                console.log(e.target);
                 const team = e.target.getAttribute('data-team');
-                const github = e.target.getAttribute('data-github');
-                const documentation = e.target.getAttribute('data-documentation');
-                setData({ team, 
-                    github, 
-                    documentation });
-                setShowDetails(true);
+                if (team) {
+                    console.log(e);
+                    const github = e.target.getAttribute('data-github');
+                    const documentation = e.target.getAttribute('data-documentation');
+                    const top = e.clientY;
+                    const left = e.clientX;
+                    setData({ team, 
+                        github, 
+                        documentation, 
+                        top, 
+                        left });
+                    setShowDetails(true);
+                } else {
+                    setData({ team: null, 
+                        github: null, 
+                        documentation: null, 
+                        top: null, 
+                        left: null });
+                    setShowDetails(false);
+                }
             }}
         >
             <Header />
@@ -31,7 +44,15 @@ export const Main = ({ children }: MainLayoutProps) => {
                 <Sidebar />
                 <div className={styles.content}>{children}</div>
             </div>
-            {showDetails && <Dropdown team={data?.team} github={data?.github} documentation={data?.documentation} />}
+            {showDetails && (
+                <Dropdown
+                    team={data?.team}
+                    github={data?.github}
+                    documentation={data?.documentation}
+                    top={data?.top}
+                    left={data?.left}
+                />
+            )}
         </div>
     );
 };
