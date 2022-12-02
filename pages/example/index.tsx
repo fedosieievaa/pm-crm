@@ -205,17 +205,6 @@ export default function Example() {
                     </li>
                     <li className={styles.listItem}>
                         <Typography text="example-sixth-li" />
-                        <Dropdown
-                            items={[
-                                { name: 'first',
-                                    id: 8382 },
-                                { name: 'second',
-                                    id: 1282 },
-                                { name: 'third',
-                                    id: 4534 },
-                            ]}
-                            isLight={isLight}
-                        />
                     </li>
                 </ol>
             </div>
