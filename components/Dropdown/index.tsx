@@ -1,50 +1,55 @@
 import { useState } from 'react';
 import styles from './index.module.scss';
+import router from 'next/router';
 
 type Props = {
-    items: any[];
-    isLight: boolean;
-    name?: string;
+    team: string;
+    github: string;
+    documentation: string;
 };
 
-export const Dropdown = ({ name = 'Dropdown', items, isLight }: Props) => {
+export const Dropdown = ({ team, github, documentation }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [activeButton, setActiveButton] = useState(items[0].name);
+    const [activeButton, setActiveButton] = useState<string>();
 
     return (
-        <div className={`${styles.dropdown} ${isLight
-            ? styles.light
-            : ''}`}>
-            <button
-                className={styles.dropdownButton}
+        <div className={styles.dropdown}>
+            <li
+                className={`${styles.dropdownListItem} ${'team' === activeButton 
+                    ? styles.active 
+                    : ''}`}
                 onClick={() => {
-                    setIsOpen(!isOpen);
+                    setIsOpen(false);
+                    setActiveButton('team');
+                    router.push(`/team/${team}`);
                 }}
             >
-                {name}
-            </button>
-            {isOpen && (
-                <ul className={styles.dropdownList}>
-                    {items.map((item: any) => {
-                        return (
-                            <li
-                                className={`${styles.dropdownListItem} ${
-                                    item.name === activeButton
-                                        ? styles.active
-                                        : ''
-                                }`}
-                                key={item.id}
-                                onClick={() => {
-                                    setIsOpen(false);
-                                    setActiveButton(item.name);
-                                }}
-                            >
-                                {item.name}
-                            </li>
-                        );
-                    })}
-                </ul>
-            )}
+                Team
+            </li>
+            <li
+                className={`${styles.dropdownListItem} ${'github' === activeButton 
+                    ? styles.active 
+                    : ''}`}
+                onClick={() => {
+                    setIsOpen(false);
+                    setActiveButton('github');
+                    router.push(`/repository/${github}`);
+                }}
+            >
+                GitHub
+            </li>
+            <li
+                className={`${styles.dropdownListItem} ${'documentation' === activeButton 
+                    ? styles.active 
+                    : ''}`}
+                onClick={() => {
+                    setIsOpen(false);
+                    setActiveButton('documentation');
+                    router.push(`/doc/${documentation}`);
+                }}
+            >
+                Documentation
+            </li>
         </div>
     );
 };

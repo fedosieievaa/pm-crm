@@ -1,0 +1,24 @@
+.container {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    gap: 10px;
+    width: calc(100% - 40px);
+    height: 130px;
+    border-radius: 10px;
+    padding: 0 20px;
+    div {
+        width: 90px;
+        height: 90px;
+        border-radius: 50px;
+        background-color: lightgray;
+    }
+    &:hover {
+        div {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+}

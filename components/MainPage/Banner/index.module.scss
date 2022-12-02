@@ -1,0 +1,26 @@
+.rect {
+    width: 350px;
+    min-width: 350px;
+    height: 150px;
+}
+.square {
+    width: 200px;
+    min-width: 200px;
+    height: 200px;
+}
+.blue {
+    background: rgb(30, 30, 91);
+}
+.purple {
+    background: rgb(58, 4, 58);
+}
+.grey {
+    background: gray;
+}
+.banner {
+    border-radius: 10px;
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+}
