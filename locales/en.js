@@ -1,0 +1,20 @@
+export default {
+    "submit-data": "Please, submit the data.",
+    "light-mode": "light",
+    "dark-mode": "dark",
+    "input-placeholder": "Type something...",
+    "submit": "Submit",
+    "example-text": "Traditionally, a text is understood to be a piece of written or spoken material in its primary form (as opposed to a paraphrase or summary). A text is any stretch of language that can be understood in context. It may be as simple as 1-2 words (such as a stop sign) or as complex as a novel. Any sequence of sentences that belong together can be considered a text.",
+    "example-first-li": "The language switcher is implemented by i18next library.",
+    "example-second-li": "The theme switcher is implemented by scss variables and mixins.",
+    "example-third-li": "Input and button types:",
+    "example-third-li-1": "Primary:",
+    "example-third-li-2": "Success:",
+    "example-third-li-3": "Error:",
+    "example-third-li-4": "Disabled:",
+    "example-third-li-5": "Loading (button only):",
+    "example-fourth-li": "Loader example.",
+    "example-fifth-li": "Press the button to open modal window.",
+    "example-sixth-li": "Dropdown example:",
+    "open": "Open"
+}

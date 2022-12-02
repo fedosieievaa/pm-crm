@@ -1,0 +1,9 @@
+@mixin color-scheme($text, $background, $border) {
+    @if list.length($background) == 1 {
+        background: $background;
+    } @else {
+        background: linear-gradient(to top left, $background);
+    }
+    color: $text;
+    @extend %color-scheme-extend;
+}
