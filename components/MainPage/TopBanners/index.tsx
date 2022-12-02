@@ -18,19 +18,19 @@ enum Color {
 export const TopBanners = () => {
     const banners = [
         { id: 'first-b', 
-            team: 'first-top', 
+            team: 'Second', 
             github: 'test', 
             documentation: 'documentation' },
         { id: 'second-b', 
-            team: 'second-top', 
+            team: 'First', 
             github: 'test', 
             documentation: 'documentation' },
         { id: 'third-b', 
-            team: 'third-top', 
+            team: 'Second', 
             github: 'test', 
             documentation: 'documentation' },
         { id: 'fourth-b', 
-            team: 'fourth-top',
+            team: 'Third',
             github: 'test', 
             documentation: 'documentation' },
     ];

@@ -5,25 +5,25 @@ export const Sport = ({ title }: any) => {
     const banners = [
         {
             id: 'first-b',
-            team: 'nemo',
+            team: 'First',
             github: 'Test 1',
             documentation: 'documentation',
         },
         {
             id: 'second-b',
-            team: 'design',
+            team: 'Second',
             github: 'Test 1',
             documentation: 'documentation',
         },
         {
             id: 'third-b',
-            team: 'frontend',
+            team: 'Third',
             github: 'Test 1',
             documentation: 'documentation',
         },
         {
             id: 'fourth-b',
-            team: 'backend',
+            team: 'First',
             github: 'Test 1',
             documentation: 'documentation',
         },
