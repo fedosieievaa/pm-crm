@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { IDeveloper, TeamList, TeamMembers } from './mockData';
+import { IDeveloper, TeamList, TeamMembers } from '../../mock/mockData';
 import { useRouter } from 'next/router';
 import TeamTable from '../../components/Table';
 

@@ -1,26 +1,25 @@
 import React from 'react';
 import moment from 'moment';
-import { IDeveloper } from '../../pages/team/mockData';
+import { IDeveloper } from '../../mock/mockData';
 
 function TeamTable(props: { teamList: Array<IDeveloper> | undefined | string }) {
     const { teamList } = props;
     return (
         <div>
-            {teamList?.length
-                ? (
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Surname</th>
-                                <th>Slack Name</th>
-                                <th>Period</th>
-                                <th>Position</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {Array.isArray(teamList) &&
+            {teamList?.length ? (
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Slack Name</th>
+                            <th>Period</th>
+                            <th>Position</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {Array.isArray(teamList) &&
                             teamList.map((item: IDeveloper) => {
                                 return (
                                     <React.Fragment key={item.id}>
@@ -40,12 +39,11 @@ function TeamTable(props: { teamList: Array<IDeveloper> | undefined | string }) 
                                     </React.Fragment>
                                 );
                             })}
-                        </tbody>
-                    </table>
-                )
-                : (
-                    <div>No data found!</div>
-                )}
+                    </tbody>
+                </table>
+            ) : (
+                <div>No data found!</div>
+            )}
         </div>
     );
 }

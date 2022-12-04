@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { FormEvent, useState } from 'react';
-import { TeamList, TeamMembers } from './mockData';
+import { TeamList, TeamMembers } from '../../mock/mockData';
 
 function TeamList() {
     const [option, setOptionSelect] = useState<string>();
