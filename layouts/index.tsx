@@ -3,14 +3,17 @@ import Header from './header';
 import { Sidebar } from '../components/Sidebar';
 import { Dropdown } from '../components/Dropdown';
 import { useState } from 'react';
+import { Modal } from '../components/Modal';
+import { SignIn } from '../components/SignIn';
+import { SignUp } from '../components/SignUp';
 
 type MainLayoutProps = {
     children: any;
 };
 
 export const Main = ({ children }: MainLayoutProps) => {
-    const [data, setData] = useState<any>();
-    const [showDetails, setShowDetails] = useState<any>(false);
+    const [data, setData] = useState<any>(null);
+    const [modalType, setModalType] = useState<string | null>(null);
 
     return (
         <div
@@ -18,7 +21,6 @@ export const Main = ({ children }: MainLayoutProps) => {
             onClick={(e: any) => {
                 const team = e.target.getAttribute('data-team');
                 if (team) {
-                    console.log(e);
                     const github = e.target.getAttribute('data-github');
                     const documentation = e.target.getAttribute('data-documentation');
                     const top = e.clientY;
@@ -28,23 +30,17 @@ export const Main = ({ children }: MainLayoutProps) => {
                         documentation, 
                         top, 
                         left });
-                    setShowDetails(true);
                 } else {
-                    setData({ team: null, 
-                        github: null, 
-                        documentation: null, 
-                        top: null, 
-                        left: null });
-                    setShowDetails(false);
+                    setData(null);
                 }
             }}
         >
-            <Header />
+            <Header setModalType={setModalType} />
             <div className={styles.wrapper}>
                 <Sidebar />
                 <div className={styles.content}>{children}</div>
             </div>
-            {showDetails && (
+            {data && (
                 <Dropdown
                     team={data?.team}
                     github={data?.github}
@@ -52,6 +48,20 @@ export const Main = ({ children }: MainLayoutProps) => {
                     top={data?.top}
                     left={data?.left}
                 />
+            )}
+            {modalType && (
+                <Modal
+                    team="Second"
+                    github="github"
+                    documentation="documentation"
+                    close={() => {
+                        setModalType(null);
+                    }}
+                >
+                    {modalType === 'sign-in' 
+                        ? <SignIn /> 
+                        : <SignUp />}
+                </Modal>
             )}
         </div>
     );

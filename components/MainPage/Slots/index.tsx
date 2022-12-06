@@ -3,26 +3,60 @@ import { Banner } from '../Banner';
 
 export const Slots = () => {
     const banners = [
-        { id: 'first-s' },
-        { id: 'second-s' },
-        { id: 'third-s' },
-        { id: 'fourth-s' },
-        { id: 'fifth-s' },
-        { id: 'sixth-s' },
-        { id: 'seventh-s' },
+        { 
+            id: 'first-s', 
+            team: 'First', 
+            github: 'Test 1', 
+            documentation: 'documentation' 
+        },
+        { 
+            id: 'second-s', 
+            team: 'First', 
+            github: 'Test 1', 
+            documentation: 'documentation' 
+        },
+        { 
+            id: 'third-s', 
+            team: 'First', 
+            github: 'Test 1', 
+            documentation: 'documentation' 
+        },
+        { 
+            id: 'fourth-s', 
+            team: 'First', 
+            github: 'Test 1', 
+            documentation: 'documentation' },
+        { 
+            id: 'fifth-s', 
+            team: 'First', 
+            github: 'Test 1', 
+            documentation: 'documentation' 
+        },
+        { 
+            id: 'sixth-s', 
+            team: 'First', 
+            github: 'Test 1', 
+            documentation: 'documentation' 
+        },
+        { 
+            id: 'seventh-s', 
+            team: 'First', 
+            github: 'Test 1', 
+            documentation: 'documentation' 
+        },
     ];
 
     return (
         <div className={style.wrapper}>
             <div className={style.banners}>
-                {banners.map(({ id }) => (
+                {banners.map(({ id, team, github, documentation }) => (
                     <Banner
                         key={id}
                         color="purple"
                         size="square"
-                        onClick={() => {
-                            console.log('test');
-                        }}
+                        team={team}
+                        github={github}
+                        documentation={documentation}
                     />
                 ))}
             </div>

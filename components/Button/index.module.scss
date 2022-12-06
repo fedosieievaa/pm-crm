@@ -30,6 +30,7 @@
         }
         &.disabled {
             background: rgb(80, 80, 80);
+            cursor: not-allowed;
             &:hover {
                 background: rgb(80, 80, 80);
             }
