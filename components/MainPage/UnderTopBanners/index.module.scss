@@ -1,14 +1,12 @@
 .container {
     margin: 20px 0 0 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: white;
-    gap: 10px;
-    width: calc(100% - 40px);
+    width: calc(100% - 70px);
     height: 130px;
     border-radius: 10px;
-    padding: 0 20px;
     div {
         width: 90px;
         height: 90px;
@@ -16,9 +14,7 @@
         background-color: lightgray;
     }
     &:hover {
-        div {
-            opacity: 0.6;
-            cursor: pointer;
-        }
+        opacity: 0.6;
+        cursor: pointer;
     }
 }

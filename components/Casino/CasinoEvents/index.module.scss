@@ -1,0 +1,26 @@
+.wrapper {
+    width: calc(60% - 20px);
+    margin: 20px 0 0 0;
+    background: #171716;
+    padding: 10px;
+    border-radius: 10px;
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        // flex-wrap: wrap;
+        overflow-x: scroll;
+        gap: 10px;
+        .box {
+            background-color: #5d5d5d;
+            min-width: 450px;
+            height: 140px;
+            border-radius: 10px;
+        }
+    }
+}

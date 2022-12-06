@@ -1,7 +1,7 @@
 import styles from './layout.module.scss';
 import router from 'next/router';
 
-export default function Header() {
+export default function Header({ setModalType }: any) {
     return (
         <nav className={styles.header}>
             <div className={styles.logo} onClick={() => router.push('/')}>
@@ -16,8 +16,20 @@ export default function Header() {
                 <li onClick={() => router.push('/instant-games')}>Швидкі Ігри</li>
             </ul>
             <div className={styles.login}>
-                <div>Увійти</div>
-                <div>Реєстрація</div>
+                <div
+                    onClick={() => {
+                        setModalType('sign-in');
+                    }}
+                >
+                    Увійти
+                </div>
+                <div
+                    onClick={() => {
+                        setModalType('sign-up');
+                    }}
+                >
+                    Реєстрація
+                </div>
             </div>
             {/* <span onClick={() => router.push('/example')}>Example</span> */}
         </nav>

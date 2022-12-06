@@ -1,0 +1,19 @@
+.wrapper {
+    width: 75vw;
+    color: black;
+}
+.container {
+    width: 100%;
+    height: 120px;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px 0 0;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
