@@ -4,7 +4,7 @@ import { Loader } from '../Loader';
 type Props = {
     status: string;
     text?: string | JSX.Element;
-    onClick: any;
+    onClick?: any;
     isLight: boolean;
 };
 

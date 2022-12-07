@@ -8,13 +8,13 @@ import { Modal } from '../../components/Modal/';
 import { Loader } from '../../components/Loader/';
 import { Main } from '../../layouts';
 
-enum InputTypes {
+export enum InputTypes {
     primary = 'primary',
     success = 'success',
     error = 'error',
     disabled = 'disabled',
 }
-enum ButtonTypes {
+export enum ButtonTypes {
     primary = 'primary',
     success = 'success',
     error = 'error',

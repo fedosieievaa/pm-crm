@@ -6,6 +6,7 @@
     "extends": [
         "next/core-web-vitals",
         "eslint:recommended",
+        "react-app",
         // "plugin:prettier/recommended",
         // "prettier",
         "plugin:react/recommended",

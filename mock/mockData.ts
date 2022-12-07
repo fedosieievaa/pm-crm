@@ -44,9 +44,9 @@ export const TeamMembers = [
             },
             {
                 id: 2,
-                name: 'Yulia',
-                surname: 'Shyshka',
-                slackName: 'Yulia',
+                name: 'Oleg',
+                surname: 'Markiv',
+                slackName: 'Oleg',
                 period: { startDate: '2010-08-18T23:17:11.032Z',
                     endDate: '2010-08-14T23:17:11.032Z' },
                 position: 'junior',
@@ -65,7 +65,7 @@ export const TeamMembers = [
                 surname: 'Shyshka',
                 slackName: 'Yulia',
                 period: { startDate: '2010-08-18T23:17:11.032Z',
-                    endDate: '2010-08-14T23:17:11.032Z' },
+                    endDate: '2022-12-26T23:17:11.032Z' },
                 position: 'junior',
                 action: { remove: 'remove',
                     move: 'move' },
@@ -76,7 +76,7 @@ export const TeamMembers = [
                 surname: 'Shyshka',
                 slackName: 'Yulia',
                 period: { startDate: '2010-08-18T23:17:11.032Z',
-                    endDate: '2022-11-21T23:17:11.032Z' },
+                    endDate: '2022-12-26T23:17:11.032Z' },
                 position: 'junior',
                 action: { remove: 'remove',
                     move: 'move' },
@@ -90,8 +90,27 @@ export interface TeamList {
     teamName: string;
     teamList: Array<IDeveloper>;
 }
+export interface ExpiredTable {
+    teamList: Array<IDeveloper>;
+}
+
+export interface UpdateList {
+    teamName: string;
+    teamList: Array<IDeveloper>;
+}
 
 export interface IDeveloper {
+    teamList?: [
+        {
+            id: number;
+            name: string;
+            surname: string;
+            slackName: string;
+            period: { startDate: string; endDate: string };
+            position: string;
+            action: { remove: string; move: string };
+        },
+    ];
     id: number;
     name: string;
     surname: string;
