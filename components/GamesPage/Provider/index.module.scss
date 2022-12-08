@@ -1,0 +1,32 @@
+.provider {
+    margin: 20px 0 0 0;
+    color: black;
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 0 5px 0;
+    }
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    .boxes {
+        width: 100%;
+        overflow-x: scroll;
+        display: flex;
+        gap: 5px;
+        .popular,
+        .box {
+            border-radius: 10px;
+            background-color: rgb(65, 87, 80);
+        }
+        .popular {
+            min-width: 525px;
+            height: 120px;
+        }
+        .box {
+            min-width: 130px;
+            height: 56px;
+        }
+    }
+}
