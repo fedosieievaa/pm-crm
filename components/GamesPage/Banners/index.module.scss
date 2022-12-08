@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    .title {
+        font-size: 34px;
+        font-weight: bold;
+    }
+    .banners {
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+        .banner {
+            min-width: 1000px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: beige;
+        }
+    }
+}
