@@ -73,7 +73,7 @@ const Football = () => {
         <Main>
             <h1>НАЙБЛИЖЧІ МАТЧІ Футбол</h1>
             {data.map(({ id, title }) => {
-                return <Container key={id} title={title} team="First" github="test" documentation="documentation" />;
+                return <Container key={id} title={title} team="First" github="test" confluence="confluence" />;
             })}
         </Main>
     );

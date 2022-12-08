@@ -73,7 +73,7 @@ const AllLive = () => {
         <Main>
             <h1>Футбол</h1>
             {data.map(({ id, title }) => {
-                return <Container key={id} title={title} team="First" github="test" documentation="documentation" />;
+                return <Container key={id} title={title} github="test" confluence="confluence" />;
             })}
         </Main>
     );

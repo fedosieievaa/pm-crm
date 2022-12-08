@@ -4,17 +4,15 @@ type Props = {
     size: string;
     color: string;
     onClick?: any;
-    team?: string;
     github?: string;
-    documentation?: string;
+    confluence?: string;
 };
 
-export const Banner = ({ size, color, team, github, documentation }: Props) => {
+export const Banner = ({ size, color, github, confluence }: Props) => {
     return (
         <div
-            data-team={team}
             data-github={github}
-            data-documentation={documentation}
+            data-confluence={confluence}
             className={`${style.banner} ${style[color]}  ${style[size]}`}
         />
     );

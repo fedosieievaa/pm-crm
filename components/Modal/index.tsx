@@ -3,23 +3,16 @@ type Props = {
     close: () => void;
     children: any;
     isLight?: boolean;
-    team?: string;
     github?: string;
-    documentation?: string;
+    confluence?: string;
 };
-export const Modal = ({ close, children, isLight, team, github, documentation }: Props) => {
+export const Modal = ({ close, children, isLight, github, confluence }: Props) => {
     return (
-        <div 
+        <div
             className={`${styles.container} 
-            ${isLight
-            ? styles.light
-            : ''}`}>
-            <div             
-                data-team={team} 
-                data-github={github} 
-                data-documentation={documentation}  
-                className={styles.modal}
-            >
+            ${isLight ? styles.light : ''}`}
+        >
+            <div data-github={github} data-confluence={confluence} className={styles.modal}>
                 <span className={styles.close} onClick={close}>
                     x
                 </span>

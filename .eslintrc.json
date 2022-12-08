@@ -41,7 +41,7 @@
         // For more than condition using new lines
         "operator-linebreak": ["error"],
         // Ternary (only for long)
-        "multiline-ternary": ["error", "always"],
+        "multiline-ternary": ["warn", "always"],
         // Use Dot Notation where possible (class usage) / Use Bracket Notation ONLY with variables/map
         "dot-notation": "error",
         // One space must be after "{" and before "}"
@@ -49,7 +49,7 @@
         // No spaces before ":" (after any amount of spaces)
         "key-spacing": ["error", { "beforeColon": false }],
         // Multiple object elements from new line
-        "object-property-newline": ["error", { "allowMultiplePropertiesPerLine": false }],
+        "object-property-newline": ["warn", { "allowMultiplePropertiesPerLine": false }],
         //  No spaces before braces when call function
         "space-before-function-paren": ["error", "never"],
         // When calling more than one method use new line with tab
@@ -112,7 +112,7 @@
         // One space before braces when declare the function
         "space-before-blocks": "error",
         // don't give index elements as key when you use loop When you have more then 1 loop in component
-        "react/no-array-index-key": "error",
+        "react/no-array-index-key": "warn",
 
         // ____________________________________________________________________________
         // Folders has to have the same name as Component and have to have file index.(jsx or js) which unites other files in this folder.
