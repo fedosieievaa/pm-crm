@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
-import styles from '../styles/Home.module.css';
-import { Main } from '../layouts';
-import { TopBanners } from '../components/MainPage/TopBanners';
-import { UnderTopBanners } from '../components/MainPage/UnderTopBanners';
-import { Slots } from '../components/MainPage/Slots';
-import { Sport } from '../components/MainPage/Sport';
+import styles from 'styles/Home.module.css';
+import { Main } from 'layouts';
+import { TopBanners } from 'components/MainPage/TopBanners';
+import { UnderTopBanners } from 'components/MainPage/UnderTopBanners';
+import { Slots } from 'components/MainPage/Slots';
+import { Sport } from 'components/MainPage/Sport';
 
 const Home: NextPage = () => {
     return (

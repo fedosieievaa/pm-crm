@@ -5,13 +5,14 @@
 .container {
     width: 100%;
     height: 120px;
-    overflow-x: hidden;
-    background-color: #ffffff;
+    padding: 0 10px 0 0;
     display: flex;
-    gap: 10px;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 10px 0 0;
+    gap: 10px;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    border-radius: 10px;
     &:hover {
         cursor: pointer;
         opacity: 0.6;

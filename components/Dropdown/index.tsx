@@ -20,7 +20,7 @@ export const Dropdown = ({ github, confluence, top, left }: Props) => {
                 onClick={() => {
                     setIsOpen(false);
                     setActiveButton('github');
-                    router.push(`/repository/${github}`);
+                    router.push(`/${github}`);
                 }}
             >
                 GitHub
@@ -30,7 +30,7 @@ export const Dropdown = ({ github, confluence, top, left }: Props) => {
                 onClick={() => {
                     setIsOpen(false);
                     setActiveButton('confluence');
-                    router.push(`/doc/${confluence}`);
+                    router.push(`/${confluence}`);
                 }}
             >
                 Confluence
