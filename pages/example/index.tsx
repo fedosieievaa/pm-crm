@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import styles from './index.module.scss';
-import { Typography } from '../../components/Typography/';
-import { Languages } from '../../components/Languages/';
-import { Input } from '../../components/Input/';
-import { Button } from '../../components/Button/';
-import { Modal } from '../../components/Modal/';
-import { Loader } from '../../components/Loader/';
-import { Main } from '../../layouts';
+import { Typography } from 'components/Typography/';
+import { Languages } from 'components/Languages/';
+import { Input } from 'components/Input/';
+import { Button } from 'components/Button/';
+import { Modal } from 'components/Modal/';
+import { Loader } from 'components/Loader/';
+import { Main } from 'layouts';
 
 enum InputTypes {
     primary = 'primary',
@@ -30,9 +30,7 @@ export default function Example() {
 
     return (
         <Main>
-            <div className={`${styles.app} ${isLight
-                ? styles.light
-                : ''}`}>
+            <div className={`${styles.app} ${isLight ? styles.light : ''}`}>
                 <ol>
                     <li className={styles.listItem}>
                         <span className={styles.list}>
@@ -50,9 +48,7 @@ export default function Example() {
                             onClick={() => {
                                 setIsLight(!isLight);
                             }}
-                            text={<Typography text={isLight
-                                ? 'dark-mode'
-                                : 'light-mode'} isLight={isLight} />}
+                            text={<Typography text={isLight ? 'dark-mode' : 'light-mode'} isLight={isLight} />}
                             isLight={isLight}
                         />
                     </li>

@@ -1,11 +1,11 @@
 import styles from './layout.module.scss';
 import Header from './header';
-import { Sidebar } from '../components/Sidebar';
-import { Dropdown } from '../components/Dropdown';
+import { Sidebar } from 'components/Sidebar';
+import { Dropdown } from 'components/Dropdown';
 import { useState } from 'react';
-import { Modal } from '../components/Modal';
-import { SignIn } from '../components/SignIn';
-import { SignUp } from '../components/SignUp';
+import { Modal } from 'components/Modal';
+import { SignIn } from 'components/SignIn';
+import { SignUp } from 'components/SignUp';
 import { useRouter } from 'next/router';
 
 type MainLayoutProps = {
@@ -47,7 +47,16 @@ export const Main = ({ children }: MainLayoutProps) => {
     };
 
     const onDoubleClick = (e: any) => {
-        router.push('/deeper');
+        const deeper = e.target.getAttribute('data-deeper');
+        if (deeper) {
+            router.push(deeper);
+        } else {
+            const closest = e.target.closest('[data-deeper]');
+            if (closest) {
+                const deeper = closest.getAttribute('data-deeper');
+                router.push(deeper);
+            }
+        }
     };
     return (
         <>

@@ -1,5 +1,5 @@
-import { Container } from '../../components/AllLivePage/Container';
-import { Main } from '../../layouts';
+import { Container } from 'components/AllLivePage/Container';
+import { Main } from 'layouts';
 
 const data = [
     {

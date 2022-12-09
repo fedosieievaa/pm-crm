@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { IDeveloper, TeamList, TeamMembers } from '../../mock/mockData';
+import { IDeveloper, TeamList, TeamMembers } from 'mock/mockData';
 import { useRouter } from 'next/router';
-import TeamTable from '../../components/Table';
+import TeamTable from 'components/Table';
 
 function MembersTeam() {
     const [expiredDate, setExpiredDate] = useState<Array<IDeveloper>>();

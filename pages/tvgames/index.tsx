@@ -1,6 +1,6 @@
-import { Banners } from '../../components/GamesPage/Banners';
-import { ContainerTV } from '../../components/GamesPage/ContainerTV';
-import { Main } from '../../layouts';
+import { Banners } from 'components/GamesPage/Banners';
+import { ContainerTV } from 'components/GamesPage/ContainerTV';
+import { Main } from 'layouts';
 
 const TVGames = () => {
     return (

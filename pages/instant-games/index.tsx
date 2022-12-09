@@ -1,7 +1,7 @@
-import { Banners } from '../../components/GamesPage/Banners';
-import { ContainerInstant } from '../../components/GamesPage/ContainerInstant';
-import { Provider } from '../../components/GamesPage/Provider';
-import { Main } from '../../layouts';
+import { Banners } from 'components/GamesPage/Banners';
+import { ContainerInstant } from 'components/GamesPage/ContainerInstant';
+import { Provider } from 'components/GamesPage/Provider';
+import { Main } from 'layouts';
 
 const InstantGames = () => {
     return (

@@ -1,6 +1,6 @@
-import { CasinoLive } from '../../components/Casino/CasinoLive';
-import { LiveCasinoTop } from '../../components/LiveCasinoPage/LiveCasinoTop';
-import { Main } from '../../layouts';
+import { CasinoLive } from 'components/Casino/CasinoLive';
+import { LiveCasinoTop } from 'components/LiveCasinoPage/LiveCasinoTop';
+import { Main } from 'layouts';
 
 const LiveCasino = () => {
     return (
